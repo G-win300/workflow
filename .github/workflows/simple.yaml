@@ -7,8 +7,14 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: echo a string
-        run: eccho "Hello to my first github ction"
+        run: echo "Hello to my first github ction"
       - name: multiline script
         run: |
           node -v
           npm -v
+      - name: python Command
+        run:  |
+          import platform
+          print
+          (platform.processor())
+        shell: python
